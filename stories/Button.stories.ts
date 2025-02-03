@@ -23,6 +23,14 @@ export const Default: Story = {
   },
 };
 
+export const Primary: Story = {
+  args: {
+    children: 'Button',
+    variant: 'default',
+    size: 'default',
+  },
+};
+
 export const Destructive: Story = {
   args: {
     children: 'Delete',
