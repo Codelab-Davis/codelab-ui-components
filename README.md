@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 CodeLab Open Source
 
-## Getting Started
+Welcome to  **CodeLab Open Source - Component Library**, a collection of beautifully designed, reusable UI components built with **Next.js, Tailwind CSS, ShadCN, and Storybook**. This project is **licensed under the MIT License**, making it free to use and contribute to.
 
-First, run the development server:
+## ✨ Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **[Next.js](https://nextjs.org/)** – React framework for SSR, API routes, and performance optimization.
+- **[Tailwind CSS](https://tailwindcss.com/)** – Utility-first CSS framework for rapid styling.
+- **[ShadCN](https://ui.shadcn.com/)** – A customizable component library based on Radix UI.
+- **[Storybook](https://storybook.js.org/)** – A UI development environment for building and testing components in isolation.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 Custom Design Approach
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+We use **ShadCN** components as the foundation and apply **our own custom styles** on top of them. This allows us to:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Maintain **consistency** across the component library.
+- Ensure components **align with our design system**.
+- Keep up with **ShadCN updates** while having our own unique look.
 
-## Learn More
+## 📜 Available Commands
 
-To learn more about Next.js, take a look at the following resources:
+Run the following **npm scripts** for development and testing:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Command               | Description                                      |
+|-----------------------|--------------------------------------------------|
+| `npm install`        | Install dependencies                             |
+| `npm run dev`        | Start the Next.js dev server                     |
+| `npm run build`      | Build the project for production                 |
+| `npm run lint`       | Run ESLint to check for code issues              |
+| `npm run storybook`  | Start Storybook for component development        |
+| `npm run format`     | Run prettier                                     |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🤝 Contributing
 
-## Deploy on Vercel
+We welcome contributions! Please check out the **[CONTRIBUTING.md](CONTRIBUTING.md)** file for guidelines on how to get started.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+
+## 📬 Stay Connected
+
+- Join the **Discord Community**: [Invite Link](https://discord.gg/Nt6ardbM2X)
+- Visit our **Website**: [os.codelabdavis.com](https://os.codelabdavis.com/)
+- Follow us on **Insta**: [Instagram link](https://www.instagram.com/codelabdavis)
+---
+
+Happy coding! 🎉
