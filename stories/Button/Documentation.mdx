@@ -1,0 +1,139 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+A button component built on top of Radix UI's Slot primitive, offering a versatile and accessible solution for user interactions. The component supports various styles, sizes, and states to meet different design requirements.
+
+## Installation
+
+To use the Button component in your project, import it from the components directory:
+
+```tsx
+import { Button } from "@/components/ui/button"
+```
+
+## Usage
+
+### Basic Button
+
+```tsx
+<Button>Click me</Button>
+```
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Variants
+
+The Button component comes with several pre-defined variants to suit different contexts and hierarchies in your interface.
+
+### Primary
+
+The default variant, used for primary actions.
+
+<Story of={ButtonStories.Primary} />
+
+### Secondary
+
+Used for secondary actions that complement the primary action.
+
+<Story of={ButtonStories.Secondary} />
+
+### Destructive
+
+Used for destructive actions like delete or remove.
+
+<Story of={ButtonStories.Destructive} />
+
+### Outline
+
+A subtle variant with a border, useful for less prominent actions.
+
+<Story of={ButtonStories.Outline} />
+
+### Ghost
+
+A minimal variant without background or border.
+
+<Story of={ButtonStories.Ghost} />
+
+### Link
+
+Styled to look like a link while maintaining button functionality.
+
+<Story of={ButtonStories.Link} />
+
+## Sizes
+
+The button component supports different sizes to accommodate various use cases.
+
+### Default
+Standard size for most use cases.
+<Story of={ButtonStories.Base} />
+
+### Small
+Compact size for tight spaces.
+
+<Story of={ButtonStories.Small} />
+
+### Large
+Enhanced size for prominent actions.
+
+<Story of={ButtonStories.Large} />
+
+## Examples
+
+### As a Link
+You can use the button as a link using the `asChild` prop with Next.js Link or anchor tags:
+
+```tsx
+import Link from "next/link"
+
+<Button asChild>
+  <Link href="/about">About Page</Link>
+</Button>
+```
+
+### With Icon
+You can add icons to your buttons:
+
+```tsx
+import { Mail } from "lucide-react"
+
+<Button>
+  <Mail className="mr-2" />
+  Login with Email
+</Button>
+```
+
+### Disabled State
+Buttons can be disabled using the `disabled` prop:
+
+```tsx
+<Button disabled>
+  Please wait...
+</Button>
+```
+
+## Best Practices
+
+1. Use the appropriate variant to communicate the button's importance
+2. Keep button text concise and action-oriented
+3. Use icons sparingly and ensure they add meaningful context
+4. Maintain consistent button sizing within the same context
+5. Ensure sufficient color contrast for accessibility
+
+## Accessibility
+
+The Button component follows WAI-ARIA guidelines:
+- Supports keyboard navigation
+- Works with screen readers
+- Maintains focus states
+- Provides disabled states styling
+```
