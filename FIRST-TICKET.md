@@ -2,7 +2,7 @@
 
 A go-to guide to kickstart your open source contribution journey. Follow along to get familiar with our recommended process for implementing your first UI component once you claim a ticket. Let's dive in! 🎉
 
-## Table of Contents (Not working, need to fix)
+## Table of Contents
 - [🚀 Starting Your First Ticket!](#-starting-your-first-ticket)
 - [🤔 Claimed Ticket. Now What?](#-claimed-ticket-now-what)
 - [🔍 Inspecting the Design](#-inspecting-the-design)
