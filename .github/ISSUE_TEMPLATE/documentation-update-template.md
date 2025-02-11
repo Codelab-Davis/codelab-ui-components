@@ -1,10 +1,9 @@
 ---
 name: Documentation Update Template
 about: improve documentation for code.
-title: ''
-labels: ''
-assignees: ''
-
+title: ""
+labels: ""
+assignees: ""
 ---
 
 **Reason for making change?**
