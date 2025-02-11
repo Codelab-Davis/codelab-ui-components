@@ -23,21 +23,21 @@ Thank you for considering contributing to CodeLab Open Source! We appreciate you
 2. **Branching**:
     - All branch names should start with YOUR name in order for Codelab to recognize your contribution.
     - Use descriptive branch names (e.g., `Aaryan/add-slider`, `Nandini/typo-in-readme`).
-4. **Commit Messages**:
+3. **Commit Messages**:
     - Write clear, concise commit messages.
     - Follow the format: `<type>(<scope>): <subject>` (e.g., `fix(auth): correct password validation`).
-5. **Code Reviews**:
+4. **Code Reviews**:
     - PRs will be reviewed by maintainers or designated reviewers.
     - Address any feedback provided promptly.
 
 ## Code Quality
 
 - Follow industry coding standards.
-- To properly format code, use ```npm run format``` to run prettier before committing any code.
-- To check for errors, run ```npm run lint``` to the code. This should pass without any errors before commits. 
+- To properly format code, use `npm run format` to run prettier before committing any code.
+- To check for errors, run `npm run lint` to the code. This should pass without any errors before commits.
 - Ensure code is clean and well-documented.
 - A lot of people are working on this project, so adding comments will help explain your goal with the code you've written.
-- Avoid including unrelated changes in a single PR. If you think there is something that needs to be fixed, open a new issue for it or contact a maintainer on Discord. 
+- Avoid including unrelated changes in a single PR. If you think there is something that needs to be fixed, open a new issue for it or contact a maintainer on Discord.
 
 ## Communication
 
@@ -49,4 +49,3 @@ Thank you for considering contributing to CodeLab Open Source! We appreciate you
 By contributing, you agree that your contributions will be licensed under the same license as the project.
 
 Thank you for your contribution! Happy coding!
-

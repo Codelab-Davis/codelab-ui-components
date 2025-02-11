@@ -1,6 +1,6 @@
 # 🚀 CodeLab Open Source
 
-Welcome to  **CodeLab Open Source - Component Library**, a collection of beautifully designed, reusable UI components built with **Next.js, Tailwind CSS, ShadCN, and Storybook**. This project is **licensed under the MIT License**, making it free to use and contribute to.
+Welcome to **CodeLab Open Source - Component Library**, a collection of beautifully designed, reusable UI components built with **Next.js, Tailwind CSS, ShadCN, and Storybook**. This project is **licensed under the MIT License**, making it free to use and contribute to.
 
 ## ✨ Tech Stack
 
@@ -21,14 +21,14 @@ We use **ShadCN** components as the foundation and apply **our own custom styles
 
 Run the following **npm scripts** for development and testing:
 
-| Command               | Description                                      |
-|-----------------------|--------------------------------------------------|
-| `npm install`        | Install dependencies                             |
-| `npm run dev`        | Start the Next.js dev server                     |
-| `npm run build`      | Build the project for production                 |
-| `npm run lint`       | Run ESLint to check for code issues              |
-| `npm run storybook`  | Start Storybook for component development        |
-| `npm run format`     | Run prettier                                     |
+| Command             | Description                               |
+| ------------------- | ----------------------------------------- |
+| `npm install`       | Install dependencies                      |
+| `npm run dev`       | Start the Next.js dev server              |
+| `npm run build`     | Build the project for production          |
+| `npm run lint`      | Run ESLint to check for code issues       |
+| `npm run storybook` | Start Storybook for component development |
+| `npm run format`    | Run prettier                              |
 
 ## 🤝 Contributing
 
@@ -43,6 +43,7 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 - Join the **Discord Community**: [Invite Link](https://discord.gg/Nt6ardbM2X)
 - Visit our **Website**: [os.codelabdavis.com](https://os.codelabdavis.com/)
 - Follow us on **Insta**: [Instagram link](https://www.instagram.com/codelabdavis)
+
 ---
 
 Happy coding! 🎉

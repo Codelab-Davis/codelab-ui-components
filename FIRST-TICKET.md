@@ -3,18 +3,18 @@
 A go-to guide to kickstart your open source contribution journey. Follow along to get familiar with our recommended process for implementing your first UI component once you claim a ticket. Let's dive in! 🎉
 
 ## Table of Contents
+
 - [🚀 Starting Your First Ticket!](#-starting-your-first-ticket)
 - [🤔 Claimed Ticket. Now What?](#-claimed-ticket-now-what)
 - [🔍 Inspecting the Design](#-inspecting-the-design)
-  - [🎭 Component States](#-component-states)
-  - [🎨 Visual Properties](#-visual-properties)
-  - [🎞️ Interactive Elements](#-interactive-elements)
-  - [📱 Responsive Design](#-responsive-design)
-  - [♿ Accessibility](#-accessibility)
+    - [🎭 Component States](#-component-states)
+    - [🎨 Visual Properties](#-visual-properties)
+    - [🎞️ Interactive Elements](#-interactive-elements)
+    - [📱 Responsive Design](#-responsive-design)
+    - [♿ Accessibility](#-accessibility)
 - [💻 Implementation](#-implementation)
-  - [🧪 Testing](#-testing)
-  - [📚 Adding Your Component to Storybook](#-adding-your-component-to-storybook)
-
+    - [🧪 Testing](#-testing)
+    - [📚 Adding Your Component to Storybook](#-adding-your-component-to-storybook)
 
 ## 🤔 Claimed Ticket. Now What?
 
@@ -37,18 +37,21 @@ When reviewing a design, it’s essential to consider every detail. Here’s wha
 ### 🎨 Visual Properties
 
 #### Typography 📝
+
 - Font family and weight
 - Text size and line height
 - Letter spacing
 - Text alignment and wrapping
 
 #### Spacing 📐
+
 - Padding (inner spacing)
 - Margins (outer spacing)
 - Gaps between elements
 - Content alignment
 
 #### Colors 🌈
+
 - Background colors
 - Text colors
 - Border colors
@@ -58,10 +61,10 @@ When reviewing a design, it’s essential to consider every detail. Here’s wha
 ### 🎞️ Interactive Elements
 
 - **Animations:**
-  - Transition timing
-  - Easing functions
-  - Animation duration
-  - Behavior during state changes
+    - Transition timing
+    - Easing functions
+    - Animation duration
+    - Behavior during state changes
 
 ### 📱 Responsive Design
 
@@ -105,7 +108,6 @@ Test and iterate until your component looks perfect! 🔧
 ![Button Development Preview](assets/images/first-ticket/button-dev-preview.png)
 
 ### 📚 Adding Your Component to Storybook
-
 
 ### 1. Create a Storybook File
 
@@ -193,5 +195,4 @@ Storybook will launch in your browser, and you should see your new component und
 
 ### 6. Documentation
 
-- Add documentation for the component. Create a ```Documentation.mdx``` file and follow a similar structure as the sample documentation in ```stories/Button/Documentation.mdx```
-
+- Add documentation for the component. Create a `Documentation.mdx` file and follow a similar structure as the sample documentation in `stories/Button/Documentation.mdx`
