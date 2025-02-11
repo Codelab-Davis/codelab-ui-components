@@ -109,7 +109,6 @@ Test and iterate until your component looks perfect! 🔧
 
 ### 📚 Adding Your Component to Storybook
 
-
 ### 1. Create a Storybook File
 
 Create a new folder inside the `stories` which is named after the component. Create a file inside it. The filename should follow the pattern `<ComponentName>.stories.tsx`.
@@ -196,5 +195,4 @@ Storybook will launch in your browser, and you should see your new component und
 
 ### 6. Documentation
 
-- Add documentation for the component. Create a ```Documentation.mdx``` file and follow a similar structure as the sample documentation in ```stories/Button/Documentation.mdx```
-
+- Add documentation for the component. Create a `Documentation.mdx` file and follow a similar structure as the sample documentation in `stories/Button/Documentation.mdx`
