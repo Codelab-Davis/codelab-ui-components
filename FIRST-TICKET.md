@@ -18,7 +18,7 @@ A go-to guide to kickstart your open source contribution journey. Follow along t
 
 ## 🤔 Claimed Ticket. Now What?
 
-After claiming your ticket, carefully read the description. It contains all the details you need for implementing the UI component, including a Figma link to the design. Use Figma's Dev Mode to inspect developer-specific fields and access boilerplate code.
+After claiming your ticket, carefully read the description. It contains all the details you need for implementing the UI component, including a Figma link to the design. Request for Figma file access so you can use Figma's Dev Mode to inspect developer-specific fields and access boilerplate code.
 
 ![Figma Dev Mode](assets/images/first-ticket/figma-dev-mode.png) 🔍
 
@@ -85,7 +85,11 @@ Documenting these details will help guide your implementation and maintain consi
 
 With the design specifications in hand, it’s time to build your component. All UI components should be added to the `components/ui` directory.
 
-Before you begin, check the [ShadCN Website](https://ui.shadcn.com/) to see if the component already exists. If it does, use it as your starting point. If not, create a new component. **Remember:** The core functionality of ShadCN components must remain unchanged—only the design should be updated.
+**🌟 Important!**
+
+Before you begin, check the [ShadCN Website](https://ui.shadcn.com/) to see if the component already exists. If it does, use it as your starting point. If not, create a new component.
+
+**Remember:** The core functionality of ShadCN components must remain unchanged—only the design should be updated.
 
 You can add ShadCN components using the ShadCN CLI. For example, to add a Button component, run:
 
@@ -97,10 +101,30 @@ This command automatically adds the component file to the `components/ui` direct
 
 ### 🧪 Testing
 
-Preview your component during development by using the `app/test` folder. Start your Next.js development server with:
+Preview your component during development by using the `app/test/page.tsx` file. Start your Next.js development server with:
 
 ```bash
 pnpm run dev
+```
+
+When testing, place your code inside `export default function TestPage()`, and then visit `http://local host:3000/test` on your browser to view it.
+
+Your code should look similar to:
+
+```
+export default function TestPage() {
+	// Your component variants
+    const variants = [
+        // Define your variants here
+    ] as const;
+
+    // Your component sizes
+    const sizes = ["default"] as const;
+
+    return (
+        // Implement your component here
+	);
+}
 ```
 
 Test and iterate until your component looks perfect! 🔧
