@@ -1,0 +1,91 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks';
+import * as RadioButtonStories from './RadioButton.stories';
+
+<Meta of={RadioButtonStories} />
+
+# Radio Button
+
+A radio button component built using ShadCN’s radio group component.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Props](#props)
+- [Variants](#variants)
+    - [Default](#default)
+- [Best Practices](#best-practices)
+
+---
+
+## Installation
+
+To integrate the RadioButton into your project, import it from the components directory:
+
+```tsx
+import RadioButton from "@/components/ui/RadioButton";
+```
+
+---
+
+## Usage
+
+Using the RadioButton component is simple. Here’s a basic example:
+
+```tsx
+import RadioButton from "@/components/ui/RadioButton";
+
+export default function TestPage() {
+  return (
+    <main className="p-8">
+      <RadioButton title="Radio Buttons" option1="Comfortable" option2="Default" />
+    </main>
+  );
+}
+```
+
+You can change the title and options however you need go to RadioButton.tsx page to change the dimensions of the container. Sometimes the word becomes uneven and you need to go to RadioButton.tsx page to change it.  
+
+<Primary />
+
+The example above demonstrates a simple radio button group with default styling.
+
+---
+
+## Props
+
+The RadioButton component accepts various props to control its appearance and behavior. You can explore and modify these properties using the Storybook Controls panel below:
+
+<Controls />
+
+---
+
+## Variants
+
+The RadioButton component currently only includes the default variant.
+
+### Default
+
+The default variant, simple form.
+
+<Story of={RadioButtonStories.Default} />
+
+---
+
+## Best Practices
+
+When using the Radio Button component, consider these guidelines to ensure a consistent and user-friendly experience:
+
+1. **Variant Selection:** Choose the appropriate variant to clearly communicate the Radio Button's importance.
+2. **Concise Text:** Keep Radio Button labels short and action-oriented.
+3. **Icon Usage:** Incorporate icons only when they add clear context to the action.
+4. **Consistent Sizing:** Maintain uniform Radio Button sizes within the same interface context.
+5. **Accessibility:** Ensure that your Radio Button have sufficient color contrast and clear focus indicators.
+
+---
+
+## Accessibility
+
+The Radio Button component is built with accessibility in mind:
+
+- **Disabled State Styling:** Clearly indicates when the button is inactive.
