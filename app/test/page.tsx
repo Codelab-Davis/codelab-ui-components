@@ -20,18 +20,17 @@ export default function TestPage() {
 
             <div className="grid gap-4">
                 <div className="grid grid-cols-[auto_repeat(4,1fr)] gap-4">
-                    {/* Header row */}
-                    <div className="font-bold" />
-                    {sizes.map((size) => (
-                        <div
-                            key={size}
-                            className="text-center font-bold"
-                        >
-                            {size}
-                        </div>
-                    ))}
+=                    <div className="font-bold">
+                        {sizes.map((size) => (
+                            <div
+                                key={size}
+                                className="text-center font-bold"
+                            >
+                                {size}
+                            </div>
+                        ))}
+                    </div>
 
-                    {/* Button rows */}
                     {variants.map((variant) => (
                         <>
                             <div
