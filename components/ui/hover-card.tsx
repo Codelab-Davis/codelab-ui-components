@@ -22,18 +22,29 @@ const HoverCardTrigger = React.forwardRef<
 HoverCardTrigger.displayName = HoverCardPrimitive.Trigger.displayName;
 
 interface HoverCardContentProps
-  extends React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content> {
+    extends React.ComponentPropsWithoutRef<
+        typeof HoverCardPrimitive.Content
+    > {
     title?: string;
     description?: string;
     date?: string;
-  }
+}
 
 const HoverCardContent = React.forwardRef<
     React.ComponentRef<typeof HoverCardPrimitive.Content>,
     HoverCardContentProps
 >(
     (
-        { className, align = "center", sideOffset = 4, title, description, date,...props },
+        {
+            className,
+            align = "center",
+            sideOffset = 4,
+            title,
+            description,
+            date,
+            children,
+            ...props
+        },
         ref
     ) => (
         <HoverCardPrimitive.Content
@@ -65,26 +76,34 @@ const HoverCardContent = React.forwardRef<
             </div>
             <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-2">
-                    {title && <p className="font-bold text-xs/4.5">{title}</p>}
-                    {description && <p className="text-xs/4.5 font-medium">{description}</p>}
+                    {title && (
+                        <p className="font-bold text-xs/4.5">
+                            {title}
+                        </p>
+                    )}
+                    {description && (
+                        <p className="text-xs/4.5 font-medium">
+                            {description}
+                        </p>
+                    )}
                 </div>
                 {date && (
-                  <div className="flex gap-2.5">
-                      <CalendarDays
-                          width={15}
-                          height={15}
-                          stroke="#71717A"
-                      ></CalendarDays>
-                      <p className="text-xs/4.5 font-medium text-[#71717A]">
-                          {date}
-                      </p>
-                  </div>
-
+                    <div className="flex gap-2.5">
+                        <CalendarDays
+                            width={15}
+                            height={15}
+                            stroke="#71717A"
+                        ></CalendarDays>
+                        <p className="text-xs/4.5 font-medium text-[#71717A]">
+                            {date}
+                        </p>
+                    </div>
                 )}
             </div>
+            {children}
         </HoverCardPrimitive.Content>
     )
 );
 HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
 
-export { HoverCard, HoverCardTrigger, HoverCardContent };
+export { HoverCard, HoverCardTrigger, HoverCardContent, };

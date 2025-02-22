@@ -6,14 +6,18 @@ import {
 } from "@/components/ui/hover-card";
 
 const meta = {
-    title: "Components/HoverCard",
+    title: "UI/HoverCard",
     component: HoverCard,
     parameters: {
         layout: "centered",
-    },
+    }
 } satisfies Meta<typeof HoverCard>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+    args: {
+
+    }
+};
