@@ -21,12 +21,19 @@ const HoverCardTrigger = React.forwardRef<
 ));
 HoverCardTrigger.displayName = HoverCardPrimitive.Trigger.displayName;
 
+interface HoverCardContentProps
+  extends React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content> {
+    title?: string;
+    description?: string;
+    date?: string;
+  }
+
 const HoverCardContent = React.forwardRef<
     React.ComponentRef<typeof HoverCardPrimitive.Content>,
-    React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>
+    HoverCardContentProps
 >(
     (
-        { className, align = "center", sideOffset = 4, ...props },
+        { className, align = "center", sideOffset = 4, title, description, date,...props },
         ref
     ) => (
         <HoverCardPrimitive.Content
@@ -39,7 +46,7 @@ const HoverCardContent = React.forwardRef<
             )}
             {...props}
         >
-            <div className="bg-black w-[23px] h-[23px] rounded-[50%] py-[8.7px] px-[8.7px] relative">
+            <div className="bg-black w-[27px] h-[27px] rounded-full py-[8.7px] px-[8.7px] relative">
                 <div className="absolute bottom-0.5">
                     <span
                         style={{
@@ -58,23 +65,22 @@ const HoverCardContent = React.forwardRef<
             </div>
             <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-2">
-                    <p className="font-bold text-xs/4.5">
-                        @codelabdavis
-                    </p>
-                    <p className="text-xs/4.5 font-medium">
-                        Software and Design Agency at UC Davis
-                    </p>
+                    {title && <p className="font-bold text-xs/4.5">{title}</p>}
+                    {description && <p className="text-xs/4.5 font-medium">{description}</p>}
                 </div>
-                <div className="flex gap-2.5">
-                    <CalendarDays
-                        width={15}
-                        height={15}
-                        stroke="#71717A"
-                    ></CalendarDays>
-                    <p className="text-xs/4.5 font-medium text-[#71717A]">
-                        Joined December 2021
-                    </p>
-                </div>
+                {date && (
+                  <div className="flex gap-2.5">
+                      <CalendarDays
+                          width={15}
+                          height={15}
+                          stroke="#71717A"
+                      ></CalendarDays>
+                      <p className="text-xs/4.5 font-medium text-[#71717A]">
+                          {date}
+                      </p>
+                  </div>
+
+                )}
             </div>
         </HoverCardPrimitive.Content>
     )
