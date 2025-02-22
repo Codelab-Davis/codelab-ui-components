@@ -1,5 +1,5 @@
 import TestPage from "./test/page";
 
 export default function Home() {
-    return <div>{TestPage()}</div>;
+    return <div className="mx-auto my-auto">{TestPage()}</div>;
 }
