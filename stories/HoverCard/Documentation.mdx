@@ -1,1 +1,47 @@
+import { Meta, Primary, Controls, Story } from "@storybook/blocks";
+import * as HoverCardStories from "./HoverCard.stories";
 
+<Meta of={HoverCardStories} />
+
+# HoverCard
+
+A simple Hover Card component built on top of ShadCN's HoverCard component allowing for customization of its trigger, title, description, and a date.
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+
+---
+
+## Installation
+
+To use the Hover Card component, import it directly from the components directory:
+
+```tsx
+import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
+```
+
+---
+
+## Usage
+
+Using the HoverCard component is straightforward. Heres a basic example:
+
+```tsx
+<HoverCard>
+    <HoverCardTrigger>@codelabdavis</HoverCardTrigger>
+    <HoverCardContent title="@codelabdavis" description="Software and Design Agency at UC Davis" date="Joined December 2021"></HoverCardContent>
+</HoverCard>
+```
+
+<Primary />
+
+The example above demonstrates a simple Hover Card with the default styling
+
+---
+
+## Props
+
+The Button component accepts a variety of props to control its appearance and behavior. You can explore and modify these properties using the Storybook Controls panel below:
+
+<Controls />
