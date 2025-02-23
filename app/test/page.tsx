@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MountainIcon } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
 
 export default function TestPage() {
     const variants = [
@@ -14,6 +15,17 @@ export default function TestPage() {
 
     return (
         <main className="flex flex-col gap-8 p-8">
+            <h1 className="text-4xl sm:text-5xl font-bold text-center">
+                Progress Bar
+            </h1>
+            <div className="flex justify-center">
+                <Progress // "completed current of total"
+                    total={100}
+                    current={95}
+                    value={95}
+                    className="w-[80%]"
+                />{" "}
+            </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-center">
                 Button Variants
             </h1>
