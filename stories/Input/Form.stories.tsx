@@ -14,13 +14,14 @@ const meta = {
             control: "text",
         },
         label: {
-            description: "Text that appears on the label above the input",
-            control: 'text',
+            description:
+                "Text that appears on the label above the input",
+            control: "text",
         },
         variant: {
-            description: 'The style variant of the input',
-            control: 'select',
-            options: ['default', 'disabled',]
+            description: "The style variant of the input",
+            control: "select",
+            options: ["default", "disabled"],
         },
     },
     args: { onClick: fn() },
@@ -33,6 +34,6 @@ export const DefaultForm: Story = {
     args: {
         label: "Username",
         buttonText: "Submit",
-        placeholder: "codelab"
+        placeholder: "codelab",
     },
 };

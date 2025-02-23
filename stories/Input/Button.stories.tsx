@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import { ButtonInput } from "@/components/ui/input";
 
-
 const meta = {
     title: "UI/Input/Button",
     component: ButtonInput,
@@ -15,10 +14,10 @@ const meta = {
             control: "text",
         },
         variant: {
-            description: 'The style variant of the input',
-            control: 'select',
-            options: ['default', 'disabled',]
-        }
+            description: "The style variant of the input",
+            control: "select",
+            options: ["default", "disabled"],
+        },
     },
     args: { onClick: fn() },
 } satisfies Meta<typeof ButtonInput>;
@@ -29,11 +28,6 @@ type Story = StoryObj<typeof meta>;
 export const DefaultButton: Story = {
     args: {
         buttonText: "Subscribe",
-        placeholder: "Email"
+        placeholder: "Email",
     },
 };
-
-
-
-
-

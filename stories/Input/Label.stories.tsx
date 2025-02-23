@@ -10,18 +10,18 @@ const meta = {
     },
     argTypes: {
         label: {
-            description: 'The label text displayed above the input',
-            control: 'text',
+            description: "The label text displayed above the input",
+            control: "text",
         },
         placeholder: {
-            description: 'Placeholder text shown in the input',
-            control: 'text'
+            description: "Placeholder text shown in the input",
+            control: "text",
         },
         variant: {
-            description: 'The style variant of the input',
-            control: 'select',
-            options: ['default', 'disabled',]
-        }
+            description: "The style variant of the input",
+            control: "select",
+            options: ["default", "disabled"],
+        },
     },
     args: { onClick: fn() },
 } satisfies Meta<typeof LabelInput>;
