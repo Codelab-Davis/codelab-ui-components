@@ -1,25 +1,33 @@
 import {
-    Alert,
-    AlertDescription,
-    AlertTitle,
-} from "@/components/ui/alert";
+    Input,
+    FileInput,
+    ButtonInput,
+    FormInput, LabelInput,
+} from "@/components/ui/input";
 
-import { TriangleAlert } from "lucide-react";
-
-export default function TestPage() {
+export default function TestInput() {
     return (
-        <main className="flex flex-col items-center gap-4 p-8">
-            <h1 className="text-4xl sm:text-5xl font-bold text-center">
-                Alert Variants
-            </h1>
-
-            <Alert variant="default">
-                <TriangleAlert className="w-4 h-4" />
-                <AlertTitle>Warning!</AlertTitle>
-                <AlertDescription>
-                    Changes may not be saved if you leave this page.
-                </AlertDescription>
-            </Alert>
-        </main>
-    );
+        <div className="flex flex-col items-center gap-4 p-8">
+            <Input
+                placeholder={"email"}
+            />
+            <Input
+                variant={"disabled"}
+            />
+            <FileInput
+                variant={"file"}
+                label="Upload File"
+            />
+            <ButtonInput
+                variant={"disabled"}
+            />
+            <FormInput
+                label={"Username"}
+                placeholder={"codelab"}
+            />
+            <LabelInput
+                label={"Username"}
+                />
+        </div>
+    )
 }
