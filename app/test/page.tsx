@@ -1,79 +1,25 @@
-import { Button } from "@/components/ui/button";
-import { MountainIcon } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
+import {
+    Alert,
+    AlertDescription,
+    AlertTitle,
+} from "@/components/ui/alert";
+
+import { TriangleAlert } from "lucide-react";
 
 export default function TestPage() {
-    const variants = [
-        "default",
-        "destructive",
-        "outline",
-        "secondary",
-        "ghost",
-        "link",
-    ] as const;
-    const sizes = ["default", "sm", "lg", "icon"] as const;
-
     return (
-        <main className="flex flex-col gap-8 p-8">
+        <main className="flex flex-col items-center gap-4 p-8">
             <h1 className="text-4xl sm:text-5xl font-bold text-center">
-                Progress Bar
-            </h1>
-            <div className="flex justify-center">
-                <Progress // "completed current of total"
-                    total={100}
-                    current={95}
-                    value={95}
-                    className="w-[80%]"
-                />{" "}
-            </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-center">
-                Button Variants
+                Alert Variants
             </h1>
 
-            <div className="grid gap-4">
-                <div className="grid grid-cols-[auto_repeat(4,1fr)] gap-4">
-                    {/* Header row */}
-                    <div className="font-bold" />
-                    {sizes.map((size) => (
-                        <div
-                            key={size}
-                            className="text-center font-bold"
-                        >
-                            {size}
-                        </div>
-                    ))}
-
-                    {/* Button rows */}
-                    {variants.map((variant) => (
-                        <>
-                            <div
-                                key={variant}
-                                className="font-bold self-center"
-                            >
-                                {variant}
-                            </div>
-                            {sizes.map((size) => (
-                                <div
-                                    key={`${variant}-${size}`}
-                                    className="flex justify-center"
-                                >
-                                    <Button
-                                        className="h-fit"
-                                        variant={variant}
-                                        size={size}
-                                    >
-                                        {size !== "icon" ? (
-                                            "Button"
-                                        ) : (
-                                            <MountainIcon className="stroke-3" />
-                                        )}
-                                    </Button>
-                                </div>
-                            ))}
-                        </>
-                    ))}
-                </div>
-            </div>
+            <Alert variant="default">
+                <TriangleAlert className="w-4 h-4" />
+                <AlertTitle>Warning!</AlertTitle>
+                <AlertDescription>
+                    Changes may not be saved if you leave this page.
+                </AlertDescription>
+            </Alert>
         </main>
     );
 }
