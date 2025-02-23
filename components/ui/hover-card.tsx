@@ -77,15 +77,15 @@ const HoverCardContent = React.forwardRef<
             )}
             {...props}
         >
-            <div className="bg-black w-[27px] h-[27px] rounded-full py-[8.7px] px-[8.7px] relative">
-                <div className="absolute bottom-0.5">
-                    <span className="text-[#F26F71] font-bold">
+            <div className="bg-black w-[30px] h-[27.38px] rounded-full py-[6.83px] px-[8.7px] text-center relative">
+                
+                    <span className="absolute text-[#F26F71] font-black left-2 bottom-0.25">
                         .
                     </span>
-                    <span className="text-[#FFF] font-bold">
+                    <span className="absolute text-[#FFF] font-black bottom-1.5 text-xs">
                         /
                     </span>
-                </div>
+                
             </div>
             <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-2">

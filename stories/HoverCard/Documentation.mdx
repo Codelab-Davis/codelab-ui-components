@@ -10,6 +10,12 @@ A simple Hover Card component built on top of ShadCN's HoverCard component allow
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
+- [Props](#props)
+- [Variants](#variants)
+    - [Default](#default)
+- [Sizes](#sizes)
+    - [Default](#default)
+- [Best Practices](#best-practices)
 
 ---
 
@@ -42,6 +48,38 @@ The example above demonstrates a simple Hover Card with the default styling
 
 ## Props
 
-The Button component accepts a variety of props to control its appearance and behavior. You can explore and modify these properties using the Storybook Controls panel below:
+The HoverCard component accepts variations of size and color to control its appearance. You can explore and modify these properties using the Storybook Controls panel below:
 
 <Controls />
+
+---
+
+## Variants
+
+The HoverCard component currently only includes the default variant
+
+### Default
+
+The default configuration of a HoverCard, complete with title, description, and join date
+
+<Story of={HoverCardStories.Default}/>
+
+---
+
+## Sizes
+
+The HoverCard component currently only supports one size
+
+### Default
+
+The standard size
+
+<Story of={HoverCardStories.Default}/>
+
+---
+
+## Best Practices
+
+When using the HoverCard component, consider these guidelines to ensure a consistent and user-friendly experience:
+
+1. **Consise Text:** Keep the title, description, and date text short and expressive
