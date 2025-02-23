@@ -1,0 +1,98 @@
+import { Meta, Primary, Controls, Story } from "@storybook/blocks";
+import * as AlertStories from "./Alert.stories";
+import { Alert } from "@/components/ui/alert";
+
+<Meta of={AlertStories} />
+
+# Alert
+
+A simple static alert component built on top of ShadCN's alert component.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Props](#props)
+- [Variants](#variants)
+    - [Default](#default)
+- [Sizes](#sizes)
+    - [Default](#default)
+- [Best Practices](#best-practices)
+
+---
+
+## Installation
+
+To integrate the Alert component into your project, import it from the components directory:
+
+```tsx
+import { Alert } from "@/components/ui/alert";
+```
+
+---
+
+## Usage
+
+Using the Alert component is straightforward. Here’s a basic example:
+
+```tsx
+import {
+    Alert,
+    AlertDescription,
+    AlertTitle,
+} from "@/components/ui/alert";
+
+import { TriangleAlert } from "lucide-react";
+<Alert variant="default">
+    <TriangleAlert className="w-4 h-4" />
+    <AlertTitle>Warning!</AlertTitle>
+    <AlertDescription>
+        Changes may not be saved if you leave this page.
+    </AlertDescription>
+</Alert>;
+```
+
+<Primary />
+
+The example above demonstrates a simple alert with the default styling.
+
+---
+
+## Props
+
+The Alert component accepts a variety of props to control its appearance and behavior. You can explore and modify these properties using the Storybook Controls panel below:
+
+<Controls />
+
+---
+
+## Variants
+
+The Alert component currently only includes the default variant.
+
+### Default
+
+The default variant, ideal for showing an alert.
+
+<Story of={AlertStories.Default} />
+
+---
+
+## Sizes
+
+The Alert component currently only supports one size.
+
+### Default
+
+The standard size at the moment.
+
+<Story of={AlertStories.Default} />
+
+---
+
+## Best Practices
+
+When using the Alert component, consider these guidelines to ensure a consistent and user-friendly experience:
+
+1. **Concise Text:** Keep Alert titles and descriptions short and urgent.
+2. **Icon Usage:** Incorporate icons that convey caution.
