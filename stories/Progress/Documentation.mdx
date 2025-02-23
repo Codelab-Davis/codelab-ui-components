@@ -1,0 +1,51 @@
+import { Meta, Primary, Controls, Story } from "@storybook/blocks";
+import * as ProgressStories from "./Progress.stories";
+
+<Meta of={ProgressStories} />
+
+# Progress Bar
+
+A flexible and accessible progress bar component built on top of Radix UI's Progress primitive. It visually represents the completion status of a task or process, supporting dynamic updates and customizable styles.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Props](#props)
+- [Variants](#variants)
+- [Sizes](#sizes)
+- [Examples](#examples)
+- [Best Practices](#best-practices)
+- [Accessibility](#accessibility)
+
+---
+
+## Installation
+
+To integrate the Progress Bar component into your project, import it from the components directory:
+
+```tsx
+import { Progress } from "@/components/ui/progress";
+```
+
+Using the Progress Bar component is straightforward. Here’s a basic example:
+
+```tsx
+<Progress total={100} current={80} value={80} />
+```
+
+<Primary />
+
+The example above demonstrates a progress bar that is 80% complete.
+
+## Props
+
+The Progress Bar component accepts the following props to control its appearance and behavior:
+
+<Controls />
+
+## Accessibility
+
+The Progress Bar component is built with accessibility in mind:
+
+- **Screen Reader Compatibility:** provides clear feedback on the current progress value for screen reader users
