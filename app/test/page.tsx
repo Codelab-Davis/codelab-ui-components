@@ -1,11 +1,4 @@
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
-import {
-    Alert,
-    AlertDescription,
-    AlertTitle,
-} from "@/components/ui/alert";
-
-import { TriangleAlert } from "lucide-react";
 
 export default function TestPage() {
     return (
