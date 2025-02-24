@@ -1,0 +1,88 @@
+import { Meta, Primary, Controls, Story } from "@storybook/blocks";
+import * as CarouselStories from "./Carousel.stories";
+import { CarouselDemo } from "@/components/CarouselDemo";
+
+<Meta of={CarouselStories} />
+
+# Carousel
+
+A simple carousel component built on top of ShadCN's carousel component.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Props](#props)
+- [Variants](#variants)
+    - [Default](#default)
+- [Sizes](#sizes)
+    - [Default](#default)
+- [Best Practices](#best-practices)
+
+---
+
+## Installation
+
+To integrate the Carousel component into your project, import it from the components directory:
+
+```tsx
+import { Carousel } from "@/components/ui/carousel";
+```
+
+---
+
+## Usage
+
+Using the Carousel component is straightforward. Here’s a basic example:
+
+```tsx
+import {
+    CarouselDemo,
+} from "@/components/ui/CarouselDemo";
+
+```
+
+<Primary />
+
+The example above demonstrates a simple carousel with the default styling.
+
+---
+
+## Props
+
+The Carousel component accepts a variety of props to control its appearance and behavior. You can explore and modify these properties using the Storybook Controls panel below:
+
+<Controls />
+
+---
+
+## Variants
+
+The Carousel component currently only includes the default variant.
+
+### Default
+
+The default variant, ideal for showing an carousel.
+
+<Story of={CarouselStories.Default} />
+
+---
+
+## Sizes
+
+The Carousel component currently only supports one size.
+
+### Default
+
+The standard size at the moment.
+
+<Story of={CarouselStories.Default} />
+
+---
+
+## Best Practices
+
+When using the Carousel component, consider these guidelines to ensure a consistent and user-friendly experience:
+
+1. **Concise Text:** Keep Carousel titles and descriptions short and urgent.
+2. **Icon Usage:** Incorporate icons that convey caution.
