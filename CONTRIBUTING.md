@@ -35,7 +35,6 @@ Thank you for considering contributing to CodeLab Open Source! We appreciate you
 
 - Follow industry coding standards.
 - To properly format code, use `npm run format` to run prettier before committing any code. If there are any file changes after the prettier format, commit those changes as well.
-
 - To check for errors, run `npm run lint` to the code. This should pass without any errors before commits.
 - Ensure code is clean and well-documented.
 - A lot of people are working on this project, so adding comments will help explain your goal with the code you've written.
