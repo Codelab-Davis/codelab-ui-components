@@ -8,13 +8,12 @@ import { cn } from "@/lib/utils";
 const sliderVariants = cva("relative flex w-full touch-none select-none items-center", {
   variants: {
     size: {
-      default:
-        "[&_.slider-track]:h-[6px] [&_.slider-thumb]:h-[20.25px] [&_.slider-thumb]:w-[20.25px] [&_.tool-tip]:min-w-[34.5px] [&_.tool-tip]:text-[24px] [&_.tool-tip-bot]:w-4 [&_.tool-tip-bot]:h-4",
+        default: "[&_.slider-track]:h-[6px] [&_.slider-thumb]:h-[20.25px] [&_.slider-thumb]:w-[20.25px] [&_.tool-tip]:min-w-[34.5px] [&_.tool-tip]:text-[24px] [&_.tool-tip-bot]:w-4 [&_.tool-tip-bot]:h-4",
       sm: "[&_.slider-track]:h-[4px] [&_.slider-thumb]:h-[13.5px] [&_.slider-thumb]:w-[13.5px] [&_.tool-tip]:min-w-[23px] [&_.tool-tip]:text-[16px] [&_.tool-tip-bot]:w-2 [&_.tool-tip-bot]:h-2",
-      lg: "[&_.slider-track]:h-[12px] [&_.slider-thumb]:h-[27px] [&_.slider-thumb]:w-[27px]  [&_.tool-tip]:min-w-[46px] [&_.tool-tip]:text-[32px] [&_.tool-tip-bot]:w-8 [&_.tool-tip-bot]:h-8",
+        lg: "[&_.slider-track]:h-[12px] [&_.slider-thumb]:h-[27px] [&_.slider-thumb]:w-[27px] [&_.tool-tip]:min-w-[46px] [&_.tool-tip]:text-[32px] [&_.tool-tip-bot]:w-8 [&_.tool-tip-bot]:h-8",
     },
     hasLabels: {
-      true: "mx-auto w-[calc(98%)]",
+        true: "mx-auto ",
       false: "mx-0 w-full",
     },
     hasTooltip: {
@@ -59,7 +58,13 @@ const Slider = React.forwardRef<
     );
 
     return (
-      <div className="relative py-2">
+      <div className={cn("relative", showTooltip && "mt-20")}>
+        <div className="py-2 flex items-center">
+        {hasLabels && (
+            <div className="font-[Poppins] text-sm text-[#333333] mr-2 whitespace-nowrap ">
+            {props.min || 0}
+          </div>
+        )}
         <SliderPrimitive.Root
           {...props}
           ref={ref}
@@ -67,25 +72,11 @@ const Slider = React.forwardRef<
           onValueChange={handleValueChange}
           className={cn(
             sliderVariants({ size, hasLabels, hasTooltip: showTooltip }),
-            "mx-auto",
+            "flex-grow",
             className
           )}
-          
         >
-          {hasLabels && (
-            <>
-              <div className="absolute font-[Poppins] text-sm text-[#333333] left-0  transform top-1/2
-                -translate-y-1/2 -translate-x-full -ml-2">
-                {props.min || 0}
-              </div>
-              <div className="absolute font-[Poppins] text-sm text-[#333333] right-0 transform top-1/2
-                -translate-y-1/2  translate-x-full ml-2">
-                {props.max || 100}
-              </div>
-            </>
-          )}
-
-          <SliderPrimitive.Track className="slider-track relative w-full min-w-[300px] grow overflow-hidden rounded-full bg-gradient-to-r from-[#FF9B3E] to-[#FF343B] h-[6px] px-2">
+          <SliderPrimitive.Track className="slider-track relative w-full min-w-0 overflow-hidden rounded-full bg-gradient-to-r from-[#FF9B3E] to-[#FF343B] h-[6px]">
             <SliderPrimitive.Range className="absolute h-full bg-transparent" />
           </SliderPrimitive.Track>
 
@@ -110,6 +101,12 @@ const Slider = React.forwardRef<
             )}
           </SliderPrimitive.Thumb>
         </SliderPrimitive.Root>
+        {hasLabels && (
+            <div className="font-[Poppins] text-sm text-[#333333] ml-2 whitespace-nowrap">
+            {props.max || 100}
+          </div>
+        )}
+      </div>
       </div>
     );
   }
