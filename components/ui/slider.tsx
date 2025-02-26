@@ -97,7 +97,7 @@ const Slider = React.forwardRef<
               <div className="absolute bottom-[calc(160%)] left-1/2 -translate-x-1/2">
                 <div className="relative">
                   <div className="relative z-10 tool-tip inline-flex 
-                  items-center justify-center rounded-[4px] 
+                  items-center justify-center rounded-[5px] p-1
                   bg-gradient-to-r from-[#FF9B3E] to-[#FF343B] 
                   text-white font-[Poppins] font-semibold">
                     {tooltipContent ? tooltipContent(sliderValue) : sliderValue[0]}
