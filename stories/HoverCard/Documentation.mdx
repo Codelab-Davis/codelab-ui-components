@@ -36,13 +36,15 @@ Using the HoverCard component is straightforward. Heres a basic example:
 ```tsx
 <HoverCard>
     <HoverCardTrigger>@codelabdavis</HoverCardTrigger>
-    <HoverCardContent title="@codelabdavis" description="Software and Design Agency at UC Davis" date="Joined December 2021"></HoverCardContent>
+    <HoverCardContent>
+        <div>Card content lives inside the HoverCardContent tag</div>
+    </HoverCardContent>
 </HoverCard>
 ```
 
 <Primary />
 
-The example above demonstrates a simple Hover Card with the default styling
+The example above demonstrates a simple Hover Card with the default styling and some example content.
 
 ---
 
@@ -60,7 +62,7 @@ The HoverCard component currently only includes the default variant
 
 ### Default
 
-The default configuration of a HoverCard, complete with title, description, and join date
+The default configuration of a HoverCard has built-in styling for the trigger, padding for the content, and margins. Contains example content.
 
 <Story of={HoverCardStories.Default}/>
 
@@ -82,4 +84,4 @@ The standard size
 
 When using the HoverCard component, consider these guidelines to ensure a consistent and user-friendly experience:
 
-1. **Consise Text:** Keep the title, description, and date text short and expressive
+1. **Consise Text:** Keep content compact and neatly laid out in the card for best visual effect.
