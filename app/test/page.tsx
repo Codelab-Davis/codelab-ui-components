@@ -1,25 +1,66 @@
 import {
-    Alert,
-    AlertDescription,
-    AlertTitle,
-} from "@/components/ui/alert";
+    Card,
+    CardHeader,
+    CardFooter,
+    CardTitle,
+    CardDescription,
+    CardContent,
+} from "@/components/ui/card";
 
-import { TriangleAlert } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function TestPage() {
     return (
         <main className="flex flex-col items-center gap-4 p-8">
             <h1 className="text-4xl sm:text-5xl font-bold text-center">
-                Alert Variants
+                Card Variants
             </h1>
 
-            <Alert variant="default">
-                <TriangleAlert className="w-4 h-4" />
-                <AlertTitle>Warning!</AlertTitle>
-                <AlertDescription>
-                    Changes may not be saved if you leave this page.
-                </AlertDescription>
-            </Alert>
+            <Card>
+                <CardHeader>
+                    <CardTitle>Create Project</CardTitle>
+                    <CardDescription>
+                        Adding guiding text tells users what to expect
+                    </CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <form>
+                        <div className="flex flex-col gap-5">
+                            <div className="flex flex-col gap-4">
+                                <label className="text-xs font-medium">
+                                    Fun Text Field
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter user text here"
+                                    required
+                                    className="px-4 py-3 font-normal text-[#C9C9C9] text-xs border rounded-md box-border shadow-xs"
+                                />
+                            </div>
+
+                            <div className="flex flex-col gap-4">
+                                <label className="text-xs font-medium">
+                                    Fun Text Field
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter user text here"
+                                    required
+                                    className="px-4 py-3 font-normal text-[#C9C9C9] text-xs border rounded-md box-border shadow-xs"
+                                />
+                            </div>
+                        </div>
+                    </form>
+                </CardContent>
+
+                <CardFooter>
+                    <Button size="sm">Submit</Button>
+                </CardFooter>
+            </Card>
         </main>
     );
 }
