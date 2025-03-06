@@ -21,7 +21,6 @@ Thank you for considering contributing to CodeLab Open Source! We appreciate you
     - All PRs must reference a GitHub issue (e.g., "Fixes #123").
     - PRs without a corresponding issue number will not be reviewed.
 2. **Branching**:
-    - First, fork the `codelab-ui-components` repository and create a branch there. Once you think you are finished and ready, open a PR from your forked branch to Codelab's main repository.
     - All branch names should start with YOUR name in order for Codelab to recognize your contribution.
     - Use descriptive branch names (e.g., `Aaryan/add-slider`, `Nandini/typo-in-readme`).
 3. **Commit Messages**:
@@ -34,7 +33,7 @@ Thank you for considering contributing to CodeLab Open Source! We appreciate you
 ## Code Quality
 
 - Follow industry coding standards.
-- To properly format code, use `npm run format` to run prettier before committing any code. If there are any file changes after the prettier format, commit those changes as well.
+- To properly format code, use `npm run format` to run prettier before committing any code.
 - To check for errors, run `npm run lint` to the code. This should pass without any errors before commits.
 - Ensure code is clean and well-documented.
 - A lot of people are working on this project, so adding comments will help explain your goal with the code you've written.
