@@ -1,0 +1,136 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks';
+import * as InputStories from './Input.stories';
+import * as LabelInputStories from './Label.stories';
+import * as FileInputStories from './File.stories';
+import * as ButtonInputStories from './Button.stories';
+import * as FormInputStories from './Form.stories';
+
+<Meta of={InputStories} />
+
+
+# Input Component
+
+A versatile input component built on top of ShadCN's base input component
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Variants](#variants)
+- [Props](#props)
+- [Label Input](#label-input)
+- [File Input](#file-input)
+- [Button Input](#button-input)
+- [Form Input](#form-input)
+- [Best Practices](#best-practices)
+- [Accessibility](#accessibility)
+
+---
+
+## Installation
+
+To integrate any of the Input components into your project, import them from the components directory:
+
+```tsx
+import {
+  Input,
+  LabelInput,
+  FileInput,
+  ButtonInput,
+  FormInput
+} from "@/components/ui/input";
+```
+
+## Usage
+
+Here is a simple example of using the base 'Input' component:
+```tsx
+<Input/>
+```
+This renders the basic input component
+
+<Story of={InputStories.Default}/>
+
+The example above demonstrates a simple input with the default styling. You can further customize it using the available props and variants.
+
+## Props
+
+Depending on the type of input component, there are different props that can be managed. In each component, there
+is a control area where you can toy around with the props depending on your needs.
+
+
+## Variants
+
+There are two variants you can choose from:
+
+### Default
+
+The default variant.
+
+<Story of={InputStories.Default} />
+
+
+### Disabled
+
+The disabled variant.
+
+<Story of={InputStories.Disabled} />
+
+
+# Specific Styles
+
+
+## Label Input
+
+Here is an example of using the label input
+
+```tsx
+<LabelInput
+/>
+```
+<Story of={LabelInputStories.DefaultLabel} />
+<Controls of={LabelInputStories.DefaultLabel} />
+
+## File Input
+
+Here is an example of using the file input
+```tsx
+<FileInput
+/>
+```
+
+<Story of={FileInputStories.DefaultFile} />
+
+## Button Input
+
+Here is an example of using the button input
+```tsx
+<ButtonInput/>
+```
+
+<Story of={ButtonInputStories.DefaultButton} />
+<Controls of={ButtonInputStories.DefaultButton} />
+
+
+## Form Input
+
+Here is an example of using the form input
+```tsx
+<FormInput
+/>
+```
+<Story of={FormInputStories.DefaultForm} />
+<Controls of={FormInputStories.DefaultForm} />
+
+
+
+---
+
+## Best Practices
+
+When using the Input component, consider these guidelines to ensure a consistent and user-friendly experience:
+
+1. **Variant Selection:** Choose the appropriate variant to clearly communicate the input's importance.
+2. **Concise Text:** Keep input and button labels short and action-oriented.
+
+---
+
