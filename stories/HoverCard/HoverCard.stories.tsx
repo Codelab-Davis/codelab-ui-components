@@ -1,12 +1,31 @@
-import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
+import type { Meta, StoryObj } from "@storybook/react";
+import {
+    HoverCard,
+    HoverCardTrigger,
+    HoverCardContent,
+} from "@/components/ui/hover-card";
 import { CalendarDays } from "lucide-react";
 
-export default function TestPage() {
-    return (
-        <div>
-            <HoverCard>
+const meta = {
+    title: "UI/HoverCard",
+    component: HoverCard,
+    parameters: {
+        layout: "centered",
+    },
+} satisfies Meta<typeof HoverCard>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+    args: {
+        children: (
+            <>
                 <HoverCardTrigger>@codelabdavis</HoverCardTrigger>
-                <HoverCardContent>
+                <HoverCardContent
+                    variant="default"
+                    size="default"
+                >
                     <div className="flex gap-6">
                         <div className="bg-black w-[30px] h-[27.38px] rounded-full py-[6.83px] px-[8.7px] text-center relative">
                             <span className="absolute text-[#F26F71] font-black left-2 bottom-0.25">
@@ -41,7 +60,7 @@ export default function TestPage() {
                         </div>
                     </div>
                 </HoverCardContent>
-            </HoverCard>
-        </div>
-    )
-}
+            </>
+        ),
+    },
+};
