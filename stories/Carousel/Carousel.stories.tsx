@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { CarouselDemo } from "@/components/CarouselDemo";
+import { CarouselDemo } from "@/components/testcomponents/CarouselDemo";
 const meta = {
     title: "UI/Carousel",
     component: CarouselDemo,
