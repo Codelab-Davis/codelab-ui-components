@@ -1,0 +1,175 @@
+import { Meta, Primary, Controls, Story } from "@storybook/blocks";
+import * as ToastStories from "./Toast.stories";
+
+<Meta of={ToastStories} />
+
+# Toast
+
+A versatile toast component built on top of Radix UI's Toast primitive. It offers an accessible and flexible solution for user notifications, supporting various styles and actions to meet your design requirements.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Props](#props)
+- [Variants](#variants)
+    - [Simple](#simple)
+    - [With Title](#with-title)
+    - [With Title and Action](#with-title-and-action)
+    - [Destructive](#destructive)
+- [Examples](#examples)
+    - [Simple Toast](#simple-toast)
+    - [Toast with Title](#toast-with-title)
+    - [Toast with Title and Action](#toast-with-title-and-action)
+    - [Destructive Toast](#destructive-toast)
+- [Best Practices](#best-practices)
+- [Accessibility](#accessibility)
+
+---
+
+## Installation
+
+To integrate the Toast component into your project, import it from the components directory:
+
+```tsx
+import { toast, useToast } from "@/hooks/use-toast";
+import { Toaster } from "@/components/ui/toaster";
+import { ToastAction } from "@/components/ui/toast";
+```
+
+---
+
+## Usage
+
+Using the Toast component is straightforward. Here’s a basic example:
+
+```tsx
+<div className="space-y-4">
+    <Button
+        onClick={() => {
+            toast({
+                description: "Your message has been sent.",
+            });
+        }}
+    >
+        Show Toast
+    </Button>
+</div>
+```
+
+## Props
+
+The Toast component accepts a variety of props to control its appearance and behavior. You can explore and modify these properties using the Storybook Controls panel below:
+
+<Controls />
+
+---
+
+## Variants
+
+The Toast component includes several pre-defined variants to help you match the design context and action priority. Choose the variant that best communicates the intended action.
+
+### Simple
+
+A basic toast with a description.
+
+<Story of={ToastStories.Simple} />
+
+### With Title
+
+A toast with a title and description.
+
+<Story of={ToastStories.WithTitle} />
+
+### With Title and Action
+
+A toast with a title, description, and an action button.
+
+<Story of={ToastStories.WithTitleAndAction} />
+
+### Destructive
+
+A toast designed for actions that have potentially destructive outcomes, such as deleting data.
+
+<Story of={ToastStories.Destructive} />
+
+---
+
+## Examples
+
+Here are some practical examples demonstrating various use cases for the Toast component.
+
+### Simple Toast
+
+A basic toast with a description.
+
+```tsx
+toast({ description: "Your message has been sent." });
+```
+
+### Toast with Title
+
+A toast with a title and description.
+
+```tsx
+toast({
+    title: "Uh oh! Something went wrong.",
+    description: "There was a problem with your request.",
+});
+```
+
+### Toast with Title and Action
+
+A toast with a title, description, and an action button.
+
+```tsx
+toast({
+    title: "Uh oh! Something went wrong.",
+    description: "There was a problem with your request.",
+    action: (
+        <ToastAction altText="Try again" onClick={() => dismiss()}>
+            Try again
+        </ToastAction>
+    ),
+});
+```
+
+### Destructive Toast
+
+A toast designed for actions that have potentially destructive outcomes.
+
+```tsx
+toast({
+    title: "Uh oh! Something went wrong.",
+    description: "There was a problem with your request.",
+    action: (
+        <ToastAction altText="Try again" onClick={() => dismiss()}>
+            Try again
+        </ToastAction>
+    ),
+    variant: "destructive",
+});
+```
+
+---
+
+## Best Practices
+
+When using the Toast component, consider these guidelines to ensure a consistent and user-friendly experience:
+
+1. **Variant Selection:** Choose the appropriate variant to clearly communicate the toast's importance.
+2. **Concise Text:** Keep toast messages short and action-oriented.
+3. **Action Usage:** Incorporate actions only when they add clear context to the notification.
+4. **Consistent Styling:** Maintain uniform toast styles within the same interface context.
+5. **Accessibility:** Ensure that your toasts have sufficient color contrast and clear focus indicators.
+
+---
+
+## Accessibility
+
+The Toast component is built with accessibility in mind:
+
+- **Keyboard Navigation:** Fully supports keyboard interactions.
+- **Screen Reader Compatibility:** Uses proper ARIA attributes for enhanced accessibility.
+- **Focus Management:** Provides visible focus states to aid users navigating via keyboard.
+- **Dismissible:** Allows users to dismiss the toast, ensuring it does not obstruct the interface.
