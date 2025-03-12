@@ -44,3 +44,4 @@ next-env.d.ts
 
 # test directory in app
 app/test
+package-lock.json
