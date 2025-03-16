@@ -1,0 +1,109 @@
+import { Meta, Primary, Controls, Story } from "@storybook/blocks";
+import * as BadgeStories from "./Badge.stories";
+import { Badge } from "@/components/ui/badge";
+
+<Meta of={BadgeStories} />
+
+# Badge
+
+Displays a badge or a component that looks like a badge.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Link](#link)
+- [Variants](#variants) 
+- [Examples](#examples)
+    - [Default](#default)
+    - [Secondary](#secondary)
+    - [Outline](#outline)
+    - [Destructive](#destructive)
+- [Best Practices](#best-practices)
+
+---
+
+## Installation
+
+To integrate the Badge component into your project, import it from the components directory:
+
+```tsx
+import { Badge } from "@/components/ui/badge";
+```
+
+---
+
+## Usage
+
+Using the Badge component is straightforward. Here’s a basic example:
+
+```tsx
+import { Badge } from "@/components/ui/badge";
+
+<Badge>Badge</Badge>
+```
+
+<Primary />
+
+---
+
+## Link
+
+You can use the `badgeVariants` helper to create a link that looks like a badge.
+
+```tsx
+import { badgeVariants } from "@/components/ui/badge";
+import Link from "next/link";
+
+<Link className={badgeVariants({ variant: "outline" })}>Badge</Link>
+```
+
+---
+
+## Variants
+
+The Badge component supports multiple variants.
+
+- **Default**: Standard badge.
+- **Secondary**: A secondary-styled badge.
+- **Outline**: A badge with outlined styling.
+- **Destructive**: A badge for destructive actions.
+
+---
+
+## Examples
+
+### Default
+
+The default variant of the badge.
+
+<Story of={BadgeStories.Default} />
+
+### Secondary
+
+The secondary variant of the badge.
+
+<Story of={BadgeStories.Secondary} />
+
+### Outline
+
+The outline variant of the badge.
+
+<Story of={BadgeStories.Outline} />
+
+### Destructive
+
+The destructive variant of the badge.
+
+<Story of={BadgeStories.Destructive} />
+
+---
+
+## Best Practices
+
+To ensure a consistent and accessible user experience, consider the following best practices when using the Badge component:
+
+1. **Use concise text**: Keep the text inside the badge short and meaningful.
+2. **Choose appropriate variants**: Use the correct variant to match the UI context.
+3. **Avoid overuse**: Badges should highlight important information, not overwhelm the interface.
+4. **Ensure readability**: Maintain contrast between text and background for accessibility.
