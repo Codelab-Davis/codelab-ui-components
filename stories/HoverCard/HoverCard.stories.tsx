@@ -22,10 +22,7 @@ export const Default: Story = {
         children: (
             <>
                 <HoverCardTrigger>@codelabdavis</HoverCardTrigger>
-                <HoverCardContent
-                    variant="default"
-                    size="default"
-                >
+                <HoverCardContent variant="default" size="default">
                     <div className="flex gap-6">
                         <div className="bg-black w-[30px] h-[27.38px] rounded-full py-[6.83px] px-[8.7px] text-center relative">
                             <span className="absolute text-[#F26F71] font-black left-2 bottom-0.25">
@@ -42,7 +39,8 @@ export const Default: Story = {
                                 </p>
 
                                 <p className="text-xs/4.5 font-medium">
-                                    Software and Design Agency at UC Davis
+                                    Software and Design Agency at UC
+                                    Davis
                                 </p>
                             </div>
 
