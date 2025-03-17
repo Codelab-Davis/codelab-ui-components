@@ -13,7 +13,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table"
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
+import { ChevronsUpDown, MoreHorizontal } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
@@ -67,24 +67,6 @@ const data: Payment[] = [
     status: "failed",
     email: "carmella@example.com",
   },
-  {
-    id: "derv1ws0",
-    amount: 837,
-    status: "processing",
-    email: "Monserrat44@example.com",
-  },
-  {
-    id: "5kma53ae",
-    amount: 874,
-    status: "success",
-    email: "Silas22@example.com",
-  },
-  {
-    id: "bhqecj4p",
-    amount: 721,
-    status: "failed",
-    email: "carmella@example.com",
-  },
 ]
 
 export type Payment = {
@@ -105,6 +87,7 @@ export const columns: ColumnDef<Payment>[] = [
         }
         onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
         aria-label="Select all"
+        className="shadow-none"
       />
     ),
     cell: ({ row }) => (
@@ -112,6 +95,7 @@ export const columns: ColumnDef<Payment>[] = [
         checked={row.getIsSelected()}
         onCheckedChange={(value) => row.toggleSelected(!!value)}
         aria-label="Select row"
+        className="shadow-none"
       />
     ),
     enableSorting: false,
@@ -119,9 +103,9 @@ export const columns: ColumnDef<Payment>[] = [
   },
   {
     accessorKey: "status",
-    header: "Status",
+    header: () => <div className="font-medium text-xs mt-0.5">Status</div>,
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("status")}</div>
+      <div className="capitalize font-medium text-xs">{row.getValue("status")}</div>
     ),
   },
   {
@@ -131,17 +115,18 @@ export const columns: ColumnDef<Payment>[] = [
         <Button
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          className="!p-1"
         >
-          Email
-          <ArrowUpDown />
+          <div className="font-medium text-xs mt-0.5">Email</div>
+          <ChevronsUpDown className="text-[#71717A] mt-0.5" style={{ width: "12px", height: "15px" }} />
         </Button>
       )
     },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,
+    cell: ({ row }) => <div className="lowercase font-medium text-xs">{row.getValue("email")}</div>,
   },
   {
     accessorKey: "amount",
-    header: () => <div className="text-right">Amount</div>,
+    header: () => <div className="font-medium text-xs mt-0.5">Amount</div>,
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("amount"))
 
@@ -151,7 +136,7 @@ export const columns: ColumnDef<Payment>[] = [
         currency: "USD",
       }).format(amount)
 
-      return <div className="text-right font-medium">{formatted}</div>
+      return <div className="font-medium text-xs">{formatted}</div>
     },
   },
   {
@@ -163,7 +148,7 @@ export const columns: ColumnDef<Payment>[] = [
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
+            <Button variant="ghost" className="h-8 w-8 !p-1">
               <span className="sr-only">Open menu</span>
               <MoreHorizontal />
             </Button>
@@ -210,16 +195,16 @@ export function DataTableDemo() {
     onColumnVisibilityChange: setColumnVisibility,
     onRowSelectionChange: setRowSelection,
     state: {
-        sorting,
-        columnFilters,
-        columnVisibility,
-        rowSelection,
-        pagination,
+      sorting,
+      columnFilters,
+      columnVisibility,
+      rowSelection,
+      pagination,
     },
   })
 
   return (
-    <div className="w-full">
+    <div className="max-w-[553px]">
       <div className="flex items-center py-4">
         <Input
           placeholder="Filter emails..."
@@ -227,12 +212,12 @@ export function DataTableDemo() {
           onChange={(event) =>
             table.getColumn("email")?.setFilterValue(event.target.value)
           }
-          className="max-w-sm"
+          className="max-w-sm font-medium pt-2.75 pb-1.75 shadow-none w-75 placeholder-red-600"
         />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="ml-auto">
-              Columns <ChevronDown />
+            <Button variant="outline" className="ml-auto w-25 pt-3 pb-2.5 text-xs shadow-none ml-auto">
+              Columns <ChevronsUpDown className="text-[#71717A]" style={{ width: "12px", height: "15px" }} />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
@@ -256,14 +241,14 @@ export function DataTableDemo() {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <div className="rounded-md border">
+      <div className="rounded-md border w-full">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => {
                   return (
-                    <TableHead key={header.id}>
+                    <TableHead key={header.id} className="px-3.5 pb-1 pt-1.25">
                       {header.isPlaceholder
                         ? null
                         : flexRender(
@@ -278,13 +263,13 @@ export function DataTableDemo() {
           </TableHeader>
           <TableBody>
             {table.getRowModel().rows?.length ? (
-              table.getRowModel().rows.map((row) => (
+              table.getRowModel().rows.map((row, index, rows) => (
                 <TableRow
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
                 >
-                  {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
+                  {row.getVisibleCells().map((cell, cellIndex) => (
+                    <TableCell key={cell.id} className={["px-3.5 py-1.5", index==rows.length-1 && "pb-0", cellIndex==4 && "pr-2.5 flex justify-end"].join(' ')}>
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
@@ -306,8 +291,8 @@ export function DataTableDemo() {
           </TableBody>
         </Table>
       </div>
-      <div className="flex items-center justify-end space-x-2 py-4">
-        <div className="flex-1 text-sm text-muted-foreground">
+      <div className="flex items-center justify-end space-x-2 py-3">
+        <div className="flex-1 text-sm text-muted-foreground font-medium text-xs">
           {table.getFilteredSelectedRowModel().rows.length} of{" "}
           {table.getFilteredRowModel().rows.length} row(s) selected.
         </div>
@@ -316,23 +301,25 @@ export function DataTableDemo() {
             variant="outline"
             size="sm"
             onClick={() => {
-                table.previousPage()
-                setPagination({pageIndex: pagination.pageIndex-1, pageSize: 5})
-                }
+              table.previousPage()
+              setPagination({pageIndex: pagination.pageIndex-1, pageSize: 5})
+              }
             }
             disabled={!table.getCanPreviousPage()}
+            className="!h-auto px-4 py-3 shadow-none"
           >
             Previous
           </Button>
           <Button
-            variant="outline"
+            variant="default"
             size="sm"
             onClick={() => {
-                table.nextPage()
-                setPagination({pageIndex: pagination.pageIndex+1, pageSize: pagination.pageSize})
-                }
+              table.nextPage()
+              setPagination({pageIndex: pagination.pageIndex+1, pageSize: pagination.pageSize})
+              }
             }
             disabled={!table.getCanNextPage()}
+            className="!h-auto px-4 py-3 shadow-none bg-gradient-to-r from-[#FF9B3E] to-[#FF343B]"
           >
             Next
           </Button>
