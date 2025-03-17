@@ -65,9 +65,7 @@ const HoverCardContent = React.forwardRef<
                 className
             )}
             {...props}
-        >
-        
-        </HoverCardPrimitive.Content>
+        ></HoverCardPrimitive.Content>
     )
 );
 HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
