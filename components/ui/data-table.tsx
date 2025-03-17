@@ -67,6 +67,24 @@ const data: Payment[] = [
     status: "failed",
     email: "carmella@example.com",
   },
+  {
+    id: "derv1ws0",
+    amount: 837,
+    status: "processing",
+    email: "Monserrat44@example.com",
+  },
+  {
+    id: "5kma53ae",
+    amount: 874,
+    status: "success",
+    email: "Silas22@example.com",
+  },
+  {
+    id: "bhqecj4p",
+    amount: 721,
+    status: "failed",
+    email: "carmella@example.com",
+  },
 ]
 
 export type Payment = {
@@ -175,6 +193,10 @@ export function DataTableDemo() {
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({})
   const [rowSelection, setRowSelection] = React.useState({})
+  const [pagination, setPagination] = React.useState({
+    pageIndex: 0,
+    pageSize: 5,
+  })
 
   const table = useReactTable({
     data,
@@ -188,10 +210,11 @@ export function DataTableDemo() {
     onColumnVisibilityChange: setColumnVisibility,
     onRowSelectionChange: setRowSelection,
     state: {
-      sorting,
-      columnFilters,
-      columnVisibility,
-      rowSelection,
+        sorting,
+        columnFilters,
+        columnVisibility,
+        rowSelection,
+        pagination,
     },
   })
 
@@ -292,7 +315,11 @@ export function DataTableDemo() {
           <Button
             variant="outline"
             size="sm"
-            onClick={() => table.previousPage()}
+            onClick={() => {
+                table.previousPage()
+                setPagination({pageIndex: pagination.pageIndex-1, pageSize: 5})
+                }
+            }
             disabled={!table.getCanPreviousPage()}
           >
             Previous
@@ -300,7 +327,11 @@ export function DataTableDemo() {
           <Button
             variant="outline"
             size="sm"
-            onClick={() => table.nextPage()}
+            onClick={() => {
+                table.nextPage()
+                setPagination({pageIndex: pagination.pageIndex+1, pageSize: pagination.pageSize})
+                }
+            }
             disabled={!table.getCanNextPage()}
           >
             Next
