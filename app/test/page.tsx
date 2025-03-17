@@ -1,9 +1,13 @@
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import { CalendarDays } from "lucide-react";
+import { DataTableDemo } from "@/components/ui/data-table";
 
 export default function TestPage() {
     return (
         <div>
+            <div className="p-8">
+                <DataTableDemo />
+            </div>
             <HoverCard>
                 <HoverCardTrigger>@codelabdavis</HoverCardTrigger>
                 <HoverCardContent>
