@@ -1,0 +1,117 @@
+import { Meta, Primary, Controls, Story } from "@storybook/blocks";
+import * as StepperStories from "./Stepper.stories";
+
+<Meta of={StepperStories} />
+
+# Stepper
+
+A multi-step indictator component designed to guide users through a sequence of steps/stages. It supports a variety of visual styles including labels, icons, and combinations of both, making it ideal for workflows, checkout processes, and onboarding sequences.
+
+---
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Props](#props)
+- [Variants](#variants)
+- [Sizes](#sizes)
+- [Examples](#examples)
+- [Best Practices](#best-practices)
+- [Accessibility](#accessibility)
+
+---
+
+## Installation
+
+To integrate the Stepper component into your project, import it from the components library:
+
+```tsx
+import { Stepper } from "@/components/ui/stepper";
+```
+
+---
+
+## Usage
+
+You can use the Stepper component with minimal setup. Here is a basic example:
+
+```tsx
+<Stepper
+    currentStep={2}
+    variant="simple"
+    steps{[ {content: "1"}, {content: "2"}, {content: "3"} ]} />
+```
+
+<Primary />
+
+The example above displays the simplest style of the stepper component that is partially completed. You can further customize it using the available props and variants below.
+
+## Props
+
+The Stepper component accepts the following props to control its appearance:
+
+<Controls />
+
+---
+
+## Variants
+
+The Stepper component has several variants to accomodate different visiual and functional needs, allowing you to display steps using simple numbers, labels, and/or icons depending on your workflow or UX goals.
+
+### Simple
+
+The bread and butter of the Stepper component—a straightforward version with all the core features you need to get started, no extras required.
+
+# <Story of={StepperStories.UnfinishedStepper} />
+
+# <Story of={StepperStories.Default} />
+
+# <Story of={StepperStories.CompleteStepper} />
+
+### With Labels
+
+This Stepper variant allows you to label each individual step circles for clarity.
+
+<Story of={StepperStories.WithLabels} />
+
+&nbsp;
+
+### With Icons
+
+This Stepper variant allows you to customize each step circle with a Lucide icon. Check out the [Lucide icon library](https://lucide.dev/icons/) to browse a wide selection of icons.
+
+<Story of={StepperStories.WithIcons} />
+
+Example configuration:
+
+```tsx
+steps: [
+    { label: "1", icon: Lucide.[exampleIcon1] },
+    { label: "2", icon: Lucide.[exampleIcon2] },
+    { label: "3", icon: Lucide.[exampleIcon3] },]
+```
+
+### With Icons & Labels
+
+Combine the clarity of text labels with the visual appeal of icons using this variant. It’s ideal for enhancing both usability and design by providing context through both words and visuals.
+
+<Story of={StepperStories.WithIconsAndLabels} />
+
+&nbsp;
+
+## Examples
+
+Here are some practical examples demonstrating various use cases for the Stepper component.
+
+<Story of={StepperStories.ExampleUsage} />
+
+&nbsp;
+
+## Best Practices
+
+When using the Stepper component, keep the following guidelines in mind to ensure clarity, usability, and consistency:
+
+1. **Choose the Right Variant:** Select a variant that best matches your use case—use labels for clarity, icons for visual guidance, or both for maximum context.
+2. **Keep Labels Concise:** Step labels should be short, descriptive, and easy to scan. Avoid long phrases that may cause layout issues.
+3. **Use Icons Purposefully:** Add icons only when they enhance understanding or provide meaningful visual cues for each step.
