@@ -5,6 +5,7 @@ import * as SliderPrimitive from "@radix-ui/react-slider";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
+
 // slider has properties: size, hasLabels, hasTooltip
 // size can either be default, sm, or large
 // hasLabels can either be true or false
@@ -76,7 +77,7 @@ const Slider = React.forwardRef<
             },
             [isControlled, props]
         );
-      
+
         return (
             <div className={cn("relative", showTooltip && "mt-20")}>
                 <div className="py-2 flex items-center">
