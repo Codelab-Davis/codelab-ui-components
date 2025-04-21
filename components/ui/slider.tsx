@@ -76,8 +76,7 @@ const Slider = React.forwardRef<
             },
             [isControlled, props]
         );
-
-        // everything before return is what is going to show up (frontend)
+      
         return (
             <div className={cn("relative", showTooltip && "mt-20")}>
                 <div className="py-2 flex items-center">
