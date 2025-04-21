@@ -1,0 +1,148 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks';
+import * as TabsStories from './Tabs.stories';
+
+<Meta of={TabsStories} />
+
+# Tabs
+
+A fully-featured Tabs component built on top of Radix UI's Tabs primitives. It supports both horizontal and vertical layouts and is designed with accessibility and customization in mind. Use it to create intuitive tabbed interfaces for navigating between different sections of your content.
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Props](#props)
+- [Variants](#variants)
+  - [Horizontal](#horizontal)
+  - [Vertical](#vertical)
+- [Examples](#examples)
+  - [Basic Tabs](#basic-tabs)
+  - [Vertical Tabs](#vertical-tabs)
+- [Best Practices](#best-practices)
+- [Accessibility](#accessibility)
+
+---
+
+## Installation
+
+To integrate the Tabs component into your project, simply import it from your components directory:
+
+```tsx
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+```
+
+---
+
+## Usage
+
+Using the Tabs component is straightforward. Below is an example of a basic horizontal tab interface:
+
+```tsx
+<Tabs defaultValue="tab1">
+  <TabsList>
+    <TabsTrigger value="tab1">Account</TabsTrigger>
+    <TabsTrigger value="tab2">Password</TabsTrigger>
+    <TabsTrigger value="tab3">Team</TabsTrigger>
+    <TabsTrigger value="tab4">Plan</TabsTrigger>
+  </TabsList>
+  <TabsContent value="tab1">Content for Account Tab</TabsContent>
+  <TabsContent value="tab2">Content for Password Tab</TabsContent>
+  <TabsContent value="tab3">Content for Team Tab</TabsContent>
+  <TabsContent value="tab4">Content for Plan Tab</TabsContent>
+</Tabs>
+```
+
+<Primary />
+
+The code above demonstrates a horizontal tab layout with each tab trigger mapped to corresponding content via the value prop.
+
+---
+
+## Props
+
+The Tabs component and its subcomponents—TabsList, TabsTrigger, and TabsContent—support multiple props to control their appearance and behavior. You can experiment with and adjust these properties using the Storybook Controls panel below:
+
+<Controls />
+
+---
+
+## Variants
+
+The Tabs component can be rendered in two orientations: horizontal (the default) and vertical. Change the layout by setting the orientation prop on the TabsList.
+
+### Horizontal
+
+Horizontal tabs are the default layout, presenting the tab triggers in a single row.
+
+<Story of={TabsStories.HorizontalTabsVariant} />
+
+### Vertical
+
+To display tabs vertically, pass orientation="vertical" to both the TabsList:
+
+<Story of={TabsStories.VerticalTabsVariant} />
+
+
+---
+
+## Examples
+
+Here are additional examples demonstrating different layouts.
+
+### Horizontal Tabs
+
+A straightforward implementation of horizontal tabs:
+
+```tsx
+<Tabs defaultValue="tab1">
+  <TabsList>
+    <TabsTrigger value="tab1">Home</TabsTrigger>
+    <TabsTrigger value="tab2">Profile</TabsTrigger>
+    <TabsTrigger value="tab3">Settings</TabsTrigger>
+  </TabsList>
+  <TabsContent value="tab1">Welcome to the home page.</TabsContent>
+  <TabsContent value="tab2">Manage your profile information.</TabsContent>
+  <TabsContent value="tab3">Adjust your settings here.</TabsContent>
+</Tabs>
+```
+
+### Vertical Tabs
+
+A vertical layout with a sidebar of tab triggers and corresponding content on the right:
+
+```tsx
+<Tabs defaultValue="tab1">
+  <div className="flex flex-row gap-4">
+    <TabsList orientation="vertical">
+      <TabsTrigger value="tab1">Dashboard</TabsTrigger>
+      <TabsTrigger value="tab2">Reports</TabsTrigger>
+      <TabsTrigger value="tab3">Analytics</TabsTrigger>
+    </TabsList>
+    <div className="flex-1">
+      <TabsContent value="tab1">Dashboard content goes here.</TabsContent>
+      <TabsContent value="tab2">Reports content goes here.</TabsContent>
+      <TabsContent value="tab3">Analytics content goes here.</TabsContent>
+    </div>
+  </div>
+</Tabs>
+```
+---
+
+## Best Practices
+
+When using the Tabs component, consider these guidelines to ensure a consistent and user-friendly experience:
+
+1. **Consistent Layout:** Choose a layout (horizontal or vertical) that best fits your design. Stick to one layout style within similar contexts.
+2. **Clear Labels:** Use short, descriptive labels for each tab to help users understand the content behind them.
+
+---
+
+## Accessibility
+
+The Button component is built with accessibility in mind:
+
+- **Keyboard Navigation:** Supports navigation using the arrow keys.
+- **Screen Reader Compatibility:** Uses proper ARIA attributes for enhanced accessibility.
+- **Focus Indicators:** Provides visible focus states to aid users navigating via keyboard.
+
+
+
