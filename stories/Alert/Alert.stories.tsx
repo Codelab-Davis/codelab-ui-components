@@ -32,3 +32,19 @@ export const Default: Story = {
         ),
     },
 };
+
+export const Destructive: Story = {
+    args: {
+        variant: "destructive",
+        size: "default",
+        children: (
+            <>
+                <TriangleAlert className="w-4 h-4" />
+                <AlertTitle>Warning!</AlertTitle>
+                <AlertDescription>
+                    Changes may not be saved if you leave this page.
+                </AlertDescription>
+            </>
+        ),
+    },
+};

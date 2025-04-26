@@ -1,53 +1,28 @@
+import type { Meta, StoryObj } from "@storybook/react";
 import {
     HoverCard,
     HoverCardTrigger,
     HoverCardContent,
 } from "@/components/ui/hover-card";
 import { CalendarDays } from "lucide-react";
-import { DataTable, Payment } from "@/components/ui/data-table";
 
-const dataTable_data: Payment[] = [
-    {
-        id: "m5gr84i9",
-        amount: 316,
-        status: "success",
-        email: "ken99@example.com",
+const meta = {
+    title: "UI/HoverCard",
+    component: HoverCard,
+    parameters: {
+        layout: "centered",
     },
-    {
-        id: "3u1reuv4",
-        amount: 242,
-        status: "success",
-        email: "Abe45@example.com",
-    },
-    {
-        id: "derv1ws0",
-        amount: 837,
-        status: "processing",
-        email: "Monserrat44@example.com",
-    },
-    {
-        id: "5kma53ae",
-        amount: 874,
-        status: "success",
-        email: "Silas22@example.com",
-    },
-    {
-        id: "bhqecj4p",
-        amount: 721,
-        status: "failed",
-        email: "carmella@example.com",
-    },
-];
+} satisfies Meta<typeof HoverCard>;
 
-export default function TestPage() {
-    return (
-        <div>
-            <div className="p-8">
-                <DataTable data={dataTable_data} />
-            </div>
-            <HoverCard>
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+    args: {
+        children: (
+            <>
                 <HoverCardTrigger>@codelabdavis</HoverCardTrigger>
-                <HoverCardContent>
+                <HoverCardContent variant="default" size="default">
                     <div className="flex gap-6">
                         <div className="bg-black w-[30px] h-[27.38px] rounded-full py-[6.83px] px-[8.7px] text-center relative">
                             <span className="absolute text-[#F26F71] font-black left-2 bottom-0.25">
@@ -83,7 +58,7 @@ export default function TestPage() {
                         </div>
                     </div>
                 </HoverCardContent>
-            </HoverCard>
-        </div>
-    );
-}
+            </>
+        ),
+    },
+};

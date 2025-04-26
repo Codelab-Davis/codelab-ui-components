@@ -1,0 +1,90 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks';
+import { DataTable, Payment } from "@/components/ui/data-table";
+import * as DataTableStories from './DataTable.stories';
+
+<Meta of={DataTableStories} />
+
+# DataTable
+
+A stylized data-table component built on top of ShadCN's data-table component.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Props](#props)
+- [Variants](#variants)
+    - [Default](#default)
+- [Sizes](#sizes)
+    - [Default](#default)
+- [Best Practices](#best-practices)
+
+---
+
+## Installation
+
+To integrate the DataTable component into your project, import it and the data type it operates on, Payment, from the components directory:
+
+```tsx
+import { DataTable, Payment } from "@/components/ui/data-table";
+```
+
+---
+
+## Usage
+
+Using the DataTable component is straightforward. Here’s a basic example:
+
+```tsx
+const dataTable_data: Payment[] = [
+  {
+    id: "m5gr84i9",
+    amount: 316,
+    status: "success",
+    email: "ken99@example.com",
+  },
+]
+<DataTable data={dataTable_data} />
+```
+
+The example above demonstrates a data table with 1 Payment data entry.
+
+---
+
+## Props
+
+The DataTable component accepts a sigle prop, data, which is an aray of Payment entries to render. You can modify the rendered Payment entries using the Storybook Controls panel below:
+
+<Controls />
+
+---
+
+## Variants
+
+The DataTable component currently only includes the default variant.
+
+### Default
+
+The default variant renders a data table.
+
+<Story of={DataTableStories.Default} />
+
+---
+
+## Sizes
+
+The DataTable component currently only supports one size.
+
+### Default
+
+The standard size at the moment.
+
+<Story of={DataTableStories.Default} />
+
+---
+
+## Best Practices
+
+When using the DataTable component, consider these guidelines to ensure a consistent and user-friendly experience:
+
+1. **Data:** Fetching data, to be rendered, must be incorporated by the user.
