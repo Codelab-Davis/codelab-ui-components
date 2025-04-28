@@ -1,0 +1,138 @@
+import { Meta, Primary, Controls, Story } from "@storybook/blocks";
+import * as CardStories from "./Card.stories";
+import { Card } from "@/components/ui/card";
+
+<Meta of={CardStories} />
+
+# Card
+
+A simple card component built on top of ShadCN's card component.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Variants](#variants)
+    - [Default](#default)
+- [Sizes](#sizes)
+    - [Default](#default)
+- [Best Practices](#best-practices)
+
+---
+
+## Installation
+
+To integrate the Card component into your project, import it from the components directory:
+
+```tsx
+import { Card } from "@/components/ui/card";
+```
+
+---
+
+## Usage
+
+Using the Card component is straightforward. Here’s a basic example:
+
+```tsx
+import {
+    Card,
+    CardHeader,
+    CardTitle,
+    CardDescription,
+    CardContent,
+    CardFooter,
+} from "@/components/ui/card";
+
+import { Button } from "@/components/ui/button";
+
+<Card>
+    <CardHeader>
+        <CardTitle>Create Project</CardTitle>
+        <CardDescription>
+            Adding guiding text tells users what to expect
+        </CardDescription>
+    </CardHeader>
+    <CardContent>
+        <form>
+            <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-4">
+                    <label className="text-xs font-medium">
+                        Fun Text Field
+                    </label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter user text here"
+                        required
+                        className="px-4 py-3 font-normal text-[#C9C9C9] text-xs border rounded-md box-border shadow-xs"
+                    />
+                </div>
+
+                <div className="flex flex-col gap-4">
+                    <label className="text-xs font-medium">
+                        Fun Text Field
+                    </label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter user text here"
+                        required
+                        className="px-4 py-3 font-normal text-[#C9C9C9] text-xs border rounded-md box-border shadow-xs"
+                    />
+                </div>
+            </div>
+        </form>
+    </CardContent>
+    <CardFooter>
+        <Button size="sm">Submit</Button>
+    </CardFooter>
+</Card>;
+```
+
+<Primary />
+
+The example above demonstrates a simple card layout with a title, description, and actions.
+
+---
+
+## Variants
+
+The Card component currently only includes the default variant.
+
+### Default
+
+The default variant, ideal for displaying information in a structured format.
+
+<section className="w-[320px] mb-5">
+    <Story of={CardStories.Default} />
+</section>
+
+---
+
+## Sizes
+
+The Card component sizing will adjust to the number of items inside of it, ensuring it fits the amount of content you want.
+
+### Default
+
+The standard sizing for most use cases are:
+
+<section className="flex gap-5 mb-5">
+    <Story of={CardStories.V1} />
+    <Story of={CardStories.Default} />
+    <Story of={CardStories.V3} />
+</section>
+
+---
+
+## Best Practices
+
+When using the Card component, consider these guidelines to ensure a consistent and user-friendly experience:
+
+1. **Clear Structure:** Use a title, description, and actions to keep content structured.
+2. **Minimalist Design:** Avoid overcrowding cards with too much content.
+3. **Consistent Spacing:** Maintain proper spacing for readability.
+4. **Consistent Sizing:** Maintain uniform card sizes within the same interface context.

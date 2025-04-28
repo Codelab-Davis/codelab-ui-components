@@ -1,4 +1,8 @@
-import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
+import {
+    HoverCard,
+    HoverCardTrigger,
+    HoverCardContent,
+} from "@/components/ui/hover-card";
 import { CalendarDays } from "lucide-react";
 import { DataTable, Payment } from "@/components/ui/data-table";
 
@@ -60,7 +64,8 @@ export default function TestPage() {
                                 </p>
 
                                 <p className="text-xs/4.5 font-medium">
-                                    Software and Design Agency at UC Davis
+                                    Software and Design Agency at UC
+                                    Davis
                                 </p>
                             </div>
 
@@ -80,5 +85,5 @@ export default function TestPage() {
                 </HoverCardContent>
             </HoverCard>
         </div>
-    )
+    );
 }
