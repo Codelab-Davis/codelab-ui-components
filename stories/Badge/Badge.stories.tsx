@@ -16,7 +16,7 @@ export const Default: Story = {
     args: {
         type: "solid",
         children: "Badge",
-        className: "bg-black text-white",
+        className: "bg-gradient-to-r from-orange-400 to-red-500 ",
     },
 };
 
@@ -30,7 +30,7 @@ export const Secondary: Story = {
 
 export const Destructive: Story = {
     args: {
-        type: "solid",
+        type: "destructive",
         children: "Destructive",
         className: "bg-red-500 text-white",
     },
