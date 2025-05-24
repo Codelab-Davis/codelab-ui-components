@@ -1,0 +1,95 @@
+import { Meta, Primary, Controls, Story } from "@storybook/blocks";
+import * as SheetStories from "./Sheet.stories";
+import { Sheet } from "@/components/ui/sheet";
+
+<Meta of={SheetStories} />
+
+# Sheet
+
+A simple sheet component built on top of ShadCN's sheet component.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Variants](#variants)
+    - [Default](#default)
+- [Sizes](#sizes)
+    - [Default](#default)
+- [Best Practices](#best-practices)
+
+---
+
+## Installation
+
+To integrate the Sheet component into your project, import it from the components directory:
+
+```tsx
+import { Sheet } from "@/components/ui/sheet";
+```
+
+---
+
+## Usage
+
+Using the Sheet component is straightforward. Here’s a basic example:
+
+```tsx
+import {
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from "@/components/ui/sheet";
+
+import { Button } from "@/components/ui/button";
+
+<Sheet>
+    <SheetTrigger>
+        <Button>Open</Button>
+    </SheetTrigger>
+    <SheetContent>
+        <SheetHeader>
+            <SheetTitle>Edit Profile</SheetTitle>
+            <SheetDescription>
+                Make changes to your profile here. Click save when
+                you're done.
+            </SheetDescription>
+        </SheetHeader>
+    </SheetContent>
+</Sheet>;
+```
+
+<Primary />
+
+The example above demonstrates a simple sheet layout.
+
+---
+
+## Variants
+
+The Sheet component currently only includes the default variant.
+
+### Default
+
+The default variant, ideal for displaying information in a structured format.
+
+<section className="w-[320px] mb-5">
+    <Story of={SheetStories.Default} />
+</section>
+
+---
+
+## Sizes
+
+The Sheet component currently only has one size.
+
+### Default
+
+The standard sizing at the moment:
+
+<section className="flex gap-5 mb-5">
+    <Story of={SheetStories.Default} />
+</section>
