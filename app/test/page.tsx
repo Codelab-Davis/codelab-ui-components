@@ -1,89 +1,66 @@
 import {
-    HoverCard,
-    HoverCardTrigger,
-    HoverCardContent,
-} from "@/components/ui/hover-card";
-import { CalendarDays } from "lucide-react";
-import { DataTable, Payment } from "@/components/ui/data-table";
+    Card,
+    CardHeader,
+    CardFooter,
+    CardTitle,
+    CardDescription,
+    CardContent,
+} from "@/components/ui/card";
 
-const dataTable_data: Payment[] = [
-    {
-        id: "m5gr84i9",
-        amount: 316,
-        status: "success",
-        email: "ken99@example.com",
-    },
-    {
-        id: "3u1reuv4",
-        amount: 242,
-        status: "success",
-        email: "Abe45@example.com",
-    },
-    {
-        id: "derv1ws0",
-        amount: 837,
-        status: "processing",
-        email: "Monserrat44@example.com",
-    },
-    {
-        id: "5kma53ae",
-        amount: 874,
-        status: "success",
-        email: "Silas22@example.com",
-    },
-    {
-        id: "bhqecj4p",
-        amount: 721,
-        status: "failed",
-        email: "carmella@example.com",
-    },
-];
+import { Button } from "@/components/ui/button";
 
 export default function TestPage() {
     return (
-        <div>
-            <div className="p-8">
-                <DataTable data={dataTable_data} />
-            </div>
-            <HoverCard>
-                <HoverCardTrigger>@codelabdavis</HoverCardTrigger>
-                <HoverCardContent>
-                    <div className="flex gap-6">
-                        <div className="bg-black w-[30px] h-[27.38px] rounded-full py-[6.83px] px-[8.7px] text-center relative">
-                            <span className="absolute text-[#F26F71] font-black left-2 bottom-0.25">
-                                .
-                            </span>
-                            <span className="absolute text-[#FFF] font-black bottom-1.5 text-xs">
-                                /
-                            </span>
-                        </div>
-                        <div className="flex flex-col gap-6">
-                            <div className="flex flex-col gap-2">
-                                <p className="text-xs/4.5 font-bold">
-                                    @codelabdavis
-                                </p>
+        <main className="flex flex-col items-center gap-4 p-8">
+            <h1 className="text-4xl sm:text-5xl font-bold text-center">
+                Card Variants
+            </h1>
 
-                                <p className="text-xs/4.5 font-medium">
-                                    Software and Design Agency at UC
-                                    Davis
-                                </p>
+            <Card>
+                <CardHeader>
+                    <CardTitle>Create Project</CardTitle>
+                    <CardDescription>
+                        Adding guiding text tells users what to expect
+                    </CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <form>
+                        <div className="flex flex-col gap-5">
+                            <div className="flex flex-col gap-4">
+                                <label className="text-xs font-medium">
+                                    Fun Text Field
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter user text here"
+                                    required
+                                    className="px-4 py-3 font-normal text-[#C9C9C9] text-xs border rounded-md box-border shadow-xs"
+                                />
                             </div>
 
-                            <div className="flex gap-2.5">
-                                <CalendarDays
-                                    width={15}
-                                    height={15}
-                                    stroke="#71717A"
-                                ></CalendarDays>
-
-                                <span className="text-xs/4.5 text-[#71717A] font-medium">
-                                    Joined December 2021
-                                </span>
+                            <div className="flex flex-col gap-4">
+                                <label className="text-xs font-medium">
+                                    Fun Text Field
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter user text here"
+                                    required
+                                    className="px-4 py-3 font-normal text-[#C9C9C9] text-xs border rounded-md box-border shadow-xs"
+                                />
                             </div>
                         </div>
-                    </div>
-                </HoverCardContent>
-            </HoverCard>
-        </div>
+                    </form>
+                </CardContent>
+
+                <CardFooter>
+                    <Button size="sm">Submit</Button>
+                </CardFooter>
+            </Card>
+        </main>
     );
 }
