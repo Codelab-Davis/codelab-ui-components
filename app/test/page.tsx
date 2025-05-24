@@ -17,7 +17,7 @@ export default function TestPage() {
             </h1>
 
             <Sheet>
-                <SheetTrigger>
+                <SheetTrigger asChild>
                     <Button>Open</Button>
                 </SheetTrigger>
                 <SheetContent>
@@ -25,7 +25,7 @@ export default function TestPage() {
                         <SheetTitle>Edit Profile</SheetTitle>
                         <SheetDescription>
                             Make changes to your profile here. Click
-                            save when you're done.
+                            save when you&apos;re done.
                         </SheetDescription>
                     </SheetHeader>
                 </SheetContent>
